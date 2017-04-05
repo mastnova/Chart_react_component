@@ -1,0 +1,107 @@
+.x-axis .axis-pip {
+  display: inline-block;
+}
+
+.x-axis {
+  padding-left: 41px;
+}
+
+.axis-pip {
+  color: #9197a0;
+  padding-bottom: 1px;
+}
+
+svg {
+  fill: gray;
+  cursor: pointer;
+}
+
+.svg-wrapper {
+  position: relative;
+}
+
+.y-axis {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-right: 15px;
+}
+
+.chart-wrapper {
+  display: flex;
+  align-items: flex-end;
+}
+
+.axis-pip {
+  display: flex;
+  align-items: flex-end;
+}
+
+.tooltip {
+  width: 110px;
+  height: 30px;
+  border: 1px solid transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-color: #fff;
+  box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.2);
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 3px;
+  transition: opacity .2s;
+}
+
+.tooltip.hide {
+  opacity: 0;
+}
+
+.tooltip .date {
+  color: #9197a0;
+  font-size: 13px;
+}
+
+.tooltip .rate {
+  color: #545b69;
+  padding-right: 20px;
+}
+
+.tooltip .positive-delta {
+  color: #29a154;
+  position: relative;
+}
+
+.tooltip .positive-delta:after {
+  content: '';
+  border-bottom: 9px solid #29a154;
+  border-top: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  box-sizing: border-box;
+  left: -12px;
+  top: -1px;
+  position: absolute;
+}
+
+.tooltip .negative-delta {
+  position: relative;
+  color: #f51b1b;
+}
+
+.tooltip .negative-delta:after {
+  content: '';
+  border-bottom: 5px solid transparent;
+  border-top: 9px solid #f51b1b;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  box-sizing: border-box;
+  left: -12px;
+  bottom: -2px;
+  position: absolute;
+}
+
+.chart-year {
+  color: #9197a0;
+  padding-left: 41px;
+  padding-top: 10px;
+}
